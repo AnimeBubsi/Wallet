@@ -6,6 +6,10 @@ ESX.RegisterUsableItem('lompakko', function(source)
 	TriggerClientEvent('esx_lompakko:animaatio', source)
 end)
 
+ESX.RegisterUsableItem('tlompakko', function(source)
+	TriggerClientEvent('esx_lompakko:animaatiot', source)
+end)
+
 RegisterServerEvent('esx_lompakko:summa')
 AddEventHandler('esx_lompakko:summa', function()
     local xPlayer = ESX.GetPlayerFromId(source)
@@ -13,6 +17,7 @@ AddEventHandler('esx_lompakko:summa', function()
     local rahamaara = math.random(0, Config.Maximi)
 	
 	xPlayer.removeInventoryItem('lompakko', 1)
+	xPlayer.addInventoryItem('tlompakko', 1)
         xPlayer.addMoney(rahamaara)
  	xPlayer.showNotification('You found ~g~'..rahamaara..'$~s~ from wallet')
      if Config.dclogit then
