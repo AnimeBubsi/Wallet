@@ -13,4 +13,4 @@ Install is really easy
 2. Sql
 3. server.cfg start or ensure Lompakko
 4. and restart server
-5. and if use inventoryhud drag and drop lompakko.png to invenoryhud imgages :)
+5. and if use inventoryhud drag and drop lompakko.png and tlompakko.png to invenoryhud images :)
