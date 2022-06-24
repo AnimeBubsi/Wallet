@@ -20,3 +20,16 @@ AddEventHandler('esx_lompakko:animaatio', function()
     end
 end)
 
+RegisterNetEvent('esx_lompakko:animaatiot')
+AddEventHandler('esx_lompakko:animaatiot', function()
+    if Config.Animaatio then
+        ExecuteCommand("e uncuff")
+        exports['progressBars']:startUI(5000, 'Searching money from wallet')
+        Citizen.Wait(5000)
+        ClearPedTasksImmediately(PlayerPedId())
+        ESX.ShowNotification('Wallet is empty!!')
+    else
+	xPlayer.showNotification('Wallet is empty!!')
+    end
+end)
+
