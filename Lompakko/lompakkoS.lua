@@ -14,7 +14,7 @@ RegisterServerEvent('esx_lompakko:summa')
 AddEventHandler('esx_lompakko:summa', function()
     local xPlayer = ESX.GetPlayerFromId(source)
     local nimi = GetPlayerName(source)
-    local rahamaara = math.random(0, Config.Maximi)
+    local rahamaara = math.random(Config.Minimi, Config.Maximi)
 	
 	xPlayer.removeInventoryItem('lompakko', 1)
 	xPlayer.addInventoryItem('tlompakko', 1)
